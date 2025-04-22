@@ -106,6 +106,8 @@ export default async function (eleventyConfig) {
     'node_modules/lite-youtube-embed/src/lite-yt-embed.{css,js}': `assets/components/`
   });
 
+  eleventyConfig.addPassthroughCopy('src/admin');
+
   // --------------------- general config
   return {
     markdownTemplateEngine: 'njk',
