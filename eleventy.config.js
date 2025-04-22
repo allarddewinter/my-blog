@@ -111,7 +111,7 @@ export default async function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
 
     dir: {
-      output: '_site',
+      output: 'dist',
       input: 'src',
       includes: '_includes',
       layouts: '_layouts',
