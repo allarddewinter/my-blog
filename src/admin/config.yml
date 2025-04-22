@@ -1,0 +1,23 @@
+# /admin/config.yml
+
+backend:
+  name: git-gateway # Use Netlify Identity Git Gateway
+  branch: main # Or master - Branch to update
+
+media_folder: "src/assets/images/uploads" # Where media files will be uploaded IN THE REPO
+public_folder: "/assets/images/uploads" # The public URL path FOR PREVIEWS in the CMS / for the site
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/posts
+    label: "Blog Posts" # Used in the CMS UI
+    folder: "src/posts" # The folder path where new posts will be created IN THE REPO
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+    fields: # The fields for each document, usually matching front matter
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" } # Often needed by Eleventy themes
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false } # Optional tag field
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false } # Optional image field
+      - { label: "Image Alt Text", name: "featuredImageAlt", widget: "string", required: false } # Alt text for the image
+      - { label: "Body", name: "body", widget: "markdown" }
