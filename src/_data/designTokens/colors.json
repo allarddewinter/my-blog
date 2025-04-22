@@ -1,66 +1,214 @@
 {
   "title": "Colors",
-  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print. neutral and vibrant colors are converted to color palettes, fixed colors are kept as they are",
+  "description": "Space opera-inspired hex color codes: cosmic blues, nebula purples, starlight golds, and vibrant sci-fi accents.",
   "items": [
     {
-      "name": "Gray 100",
-      "value": "#f8f8f8"
+      "name": "Starship Gray 100",
+      "value": "#f7f8fd"
     },
     {
-      "name": "Gray 200",
-      "value": "#e4e4e4"
+      "name": "Starship Gray 200",
+      "value": "#e3e4ea"
     },
     {
-      "name": "Gray 300",
-      "value": "#aeaeae"
+      "name": "Starship Gray 300",
+      "value": "#acaeb3"
     },
     {
-      "name": "Gray 400",
-      "value": "#808080"
+      "name": "Starship Gray 400",
+      "value": "#7d8088"
     },
     {
-      "name": "Gray 500",
-      "value": "#636363"
+      "name": "Starship Gray 500",
+      "value": "#60636d"
     },
     {
-      "name": "Gray 600",
-      "value": "#484848"
+      "name": "Starship Gray 600",
+      "value": "#444752"
     },
     {
-      "name": "Gray 700",
-      "value": "#3a3a3a"
+      "name": "Starship Gray 700",
+      "value": "#383a43"
     },
     {
-      "name": "Gray 800",
-      "value": "#2e2e2e"
+      "name": "Starship Gray 800",
+      "value": "#2b2d35"
     },
     {
-      "name": "Gray 900",
-      "value": "#161616"
+      "name": "Starship Gray 900",
+      "value": "#14161c"
     },
     {
-      "name": "Pink",
-      "value": "#dd4462"
+      "name": "Void Black 100",
+      "value": "#f7f8fd"
     },
     {
-      "name": "Pink Subdued",
-      "value": "#ce5769"
+      "name": "Void Black 200",
+      "value": "#e3e4e9"
     },
     {
-      "name": "Blue",
-      "value": "#4467dd"
+      "name": "Void Black 300",
+      "value": "#adadb2"
     },
     {
-      "name": "Blue Subdued",
-      "value": "#4d6cc8"
+      "name": "Void Black 400",
+      "value": "#7e8088"
     },
     {
-      "name": "Gold",
-      "value": "#fbbe25"
+      "name": "Void Black 500",
+      "value": "#61626c"
     },
     {
-      "name": "Gold Subdued",
-      "value": "#f1c15b"
+      "name": "Void Black 600",
+      "value": "#454751"
+    },
+    {
+      "name": "Void Black 700",
+      "value": "#393a43"
+    },
+    {
+      "name": "Void Black 800",
+      "value": "#2c2d35"
+    },
+    {
+      "name": "Void Black 900",
+      "value": "#15161c"
+    },
+    {
+      "name": "Nebula Purple 100",
+      "value": "#f0eeff"
+    },
+    {
+      "name": "Nebula Purple 200",
+      "value": "#e9e1ff"
+    },
+    {
+      "name": "Nebula Purple 300",
+      "value": "#cfbcff"
+    },
+    {
+      "name": "Nebula Purple 400",
+      "value": "#ae94ff"
+    },
+    {
+      "name": "Nebula Purple 500",
+      "value": "#8865fb"
+    },
+    {
+      "name": "Nebula Purple 600",
+      "value": "#673cd2"
+    },
+    {
+      "name": "Nebula Purple 700",
+      "value": "#531db6"
+    },
+    {
+      "name": "Nebula Purple 800",
+      "value": "#421693"
+    },
+    {
+      "name": "Nebula Purple 900",
+      "value": "#1a0046"
+    },
+    {
+      "name": "Plasma Pink 100",
+      "value": "#ffe8f7"
+    },
+    {
+      "name": "Plasma Pink 200",
+      "value": "#ffd3f7"
+    },
+    {
+      "name": "Plasma Pink 300",
+      "value": "#ffa4e5"
+    },
+    {
+      "name": "Plasma Pink 400",
+      "value": "#fd78c4"
+    },
+    {
+      "name": "Plasma Pink 500",
+      "value": "#d6449d"
+    },
+    {
+      "name": "Plasma Pink 600",
+      "value": "#ac1079"
+    },
+    {
+      "name": "Plasma Pink 700",
+      "value": "#910061"
+    },
+    {
+      "name": "Plasma Pink 800",
+      "value": "#75004e"
+    },
+    {
+      "name": "Plasma Pink 900",
+      "value": "#34001f"
+    },
+    {
+      "name": "Ion Blue 100",
+      "value": "#def7fa"
+    },
+    {
+      "name": "Ion Blue 200",
+      "value": "#baf8ff"
+    },
+    {
+      "name": "Ion Blue 300",
+      "value": "#6fe6f2"
+    },
+    {
+      "name": "Ion Blue 400",
+      "value": "#19c4d2"
+    },
+    {
+      "name": "Ion Blue 500",
+      "value": "#009dac"
+    },
+    {
+      "name": "Ion Blue 600",
+      "value": "#007787"
+    },
+    {
+      "name": "Ion Blue 700",
+      "value": "#00606f"
+    },
+    {
+      "name": "Ion Blue 800",
+      "value": "#004c59"
+    },
+    {
+      "name": "Ion Blue 900",
+      "value": "#001e26"
+    },
+    {
+      "name": "Starlight Gold",
+      "value": "#ffe066"
+    },
+    {
+      "name": "Starlight Gold Subdued",
+      "value": "#f9e185"
+    },
+    {
+      "name": "Nova Blue",
+      "value": "#1e90ff"
+    },
+    {
+      "name": "Nova Blue Subdued",
+      "value": "#4392e9"
+    },
+    {
+      "name": "Hyperdrive Teal",
+      "value": "#2ec4b6"
+    },
+    {
+      "name": "Hyperdrive Teal Subdued",
+      "value": "#59c0b4"
+    },
+    {
+      "name": "Laser Red",
+      "value": "#ff3864"
     }
   ]
 }

@@ -1,26 +1,48 @@
 {
   "title": "Colors",
-  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print. neutral and vibrant colors are converted to color palettes, fixed colors are kept as they are",
+  "description": "Space opera-inspired hex color codes: cosmic blues, nebula purples, starlight golds, and vibrant sci-fi accents.",
   "shades_neutral": [
     {
-      "name": "Gray",
-      "value": "#888888"
+      "name": "Starship Gray",
+      "value": "#232946"
+    },
+    {
+      "name": "Void Black",
+      "value": "#0a0a23"
     }
   ],
-  "shades_vibrant": [],
+  "shades_vibrant": [
+    {
+      "name": "Nebula Purple",
+      "value": "#7f5af0"
+    },
+    {
+      "name": "Plasma Pink",
+      "value": "#ff6ac1"
+    },
+    {
+      "name": "Ion Blue",
+      "value": "#3aefff"
+    }
+  ],
   "light_dark": [
     {
-      "name": "Pink",
-      "value": "#dd4462"
+      "name": "Starlight Gold",
+      "value": "#ffe066"
     },
     {
-      "name": "Blue",
-      "value": "#4467dd"
+      "name": "Nova Blue",
+      "value": "#1e90ff"
     },
     {
-      "name": "Gold",
-      "value": "#fbbe25"
+      "name": "Hyperdrive Teal",
+      "value": "#2ec4b6"
     }
   ],
-  "standalone": []
+  "standalone": [
+    {
+      "name": "Laser Red",
+      "value": "#ff3864"
+    }
+  ]
 }

@@ -1,7 +1,27 @@
 /* Global variables.  */
 
-/* Basic variable definitions for color schemes */
+/* Space Opera Color Palette */
 :root {
+  /* Core palette */
+  --color-starship-gray: #232946;
+  --color-void-black: #0a0a23;
+  --color-nebula-purple: #7f5af0;
+  --color-plasma-pink: #ff6ac1;
+  --color-ion-blue: #3aefff;
+  --color-starlight-gold: #ffe066;
+  --color-nova-blue: #1e90ff;
+  --color-hyperdrive-teal: #2ec4b6;
+  --color-laser-red: #ff3864;
+
+  /* Grayscale for text/backgrounds */
+  --color-gray-100: #f4f4f8;
+  --color-gray-200: #e0e2ea;
+  --color-gray-300: #c7c9d9;
+  --color-gray-400: #a1a4b3;
+  --color-gray-700: #44475a;
+  --color-gray-800: #232946;
+  --color-gray-900: #0a0a23;
+
   --gutter: var(--space-m-l);
   --transition-duration: 250ms;
   --transition-timing: ease;
@@ -11,7 +31,7 @@
   --tracking-wide: 0.04ch;
   --stroke: 1px solid var(--color-bg-accent);
 
-  --gradient-rainbow: linear-gradient(90deg, #cf4662 10%, #fbbe25 30%, #62c95c 50%, #08bccb 75%, #a977d5 90%);
+  --gradient-rainbow: linear-gradient(90deg, #ff6ac1 10%, #ffe066 30%, #2ec4b6 50%, #3aefff 75%, #7f5af0 90%);
   --gradient-conic: conic-gradient(
     var(--color-primary) 0 28%,
     var(--color-secondary) 0 67%,
@@ -33,12 +53,12 @@
 /* Light theme */
 :root,
 :root[data-theme='light'] {
-  --color-text: var(--color-gray-800);
+  --color-text: var(--color-starship-gray);
   --color-bg: var(--color-gray-100);
 
-  --color-primary: var(--color-pink);
-  --color-secondary: var(--color-blue);
-  --color-tertiary: var(--color-gold);
+  --color-primary: var(--color-plasma-pink);
+  --color-secondary: var(--color-ion-blue);
+  --color-tertiary: var(--color-starlight-gold);
 
   --color-text-accent: var(--color-gray-700);
   --color-bg-accent: var(--color-gray-200);
@@ -49,26 +69,26 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-text: var(--color-gray-100);
-    --color-bg: var(--color-gray-800);
+    --color-bg: var(--color-void-black);
 
-    --color-primary: var(--color-pink-subdued);
-    --color-secondary: var(--color-blue-subdued);
-    --color-tertiary: var(--color-gold-subdued);
+    --color-primary: var(--color-nebula-purple);
+    --color-secondary: var(--color-nova-blue);
+    --color-tertiary: var(--color-hyperdrive-teal);
 
     --color-text-accent: var(--color-gray-300);
-    --color-bg-accent: var(--color-gray-700);
-    --color-bg-accent-2: var(--color-gray-600);
+    --color-bg-accent: var(--color-starship-gray);
+    --color-bg-accent-2: var(--color-gray-700);
   }
 }
 :root[data-theme='dark'] {
   --color-text: var(--color-gray-100);
-  --color-bg: var(--color-gray-800);
+  --color-bg: var(--color-void-black);
 
-  --color-primary: var(--color-pink-subdued);
-  --color-secondary: var(--color-blue-subdued);
-  --color-tertiary: var(--color-gold-subdued);
+  --color-primary: var(--color-nebula-purple);
+  --color-secondary: var(--color-nova-blue);
+  --color-tertiary: var(--color-hyperdrive-teal);
 
   --color-text-accent: var(--color-gray-300);
-  --color-bg-accent: var(--color-gray-700);
-  --color-bg-accent-2: var(--color-gray-600);
+  --color-bg-accent: var(--color-starship-gray);
+  --color-bg-accent-2: var(--color-gray-700);
 }
