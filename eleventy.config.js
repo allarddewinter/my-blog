@@ -47,8 +47,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(plugins.syntaxHighlight);
 
   eleventyConfig.addPlugin(plugins.webc, {
-    components: ['./src/_includes/webc/*.webc'],
-    useTransform: true
+    components: './src/_includes/webc/*.webc',
+    useTransform: false
   });
 
   eleventyConfig.addPlugin(plugins.eleventyImageTransformPlugin, {
@@ -66,6 +66,13 @@ export default async function (eleventyConfig) {
 
   // ---------------------  bundle
   eleventyConfig.addBundle('css', {hoist: true});
+  eleventyConfig.addBundle("js", {
+    entryPoints: [
+      "./src/_includes/head/scripts/is-land.js",
+      "./src/_includes/head/scripts/theme-toggle.js"
+    ],
+    outputFile: "assets/js/main.js"
+  });
 
   // 	--------------------- Library and Data
   eleventyConfig.setLibrary('md', plugins.markdownLib);
