@@ -5,15 +5,7 @@ export default {
       url: '/about/'
     },
     {
-      text: 'Docs',
-      url: '/get-started/'
-    },
-    {
-      text: 'Built with',
-      url: '/built-with/'
-    },
-    {
-      text: 'Blog',
+      text: 'Posts',
       url: '/blog/'
     }
   ],

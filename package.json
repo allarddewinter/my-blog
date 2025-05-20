@@ -1,8 +1,8 @@
 {
-  "name": "eleventy-excellent",
-  "version": "4.1.7",
-  "description": "Eleventy starter built around the workflow suggested by Andy Bell's buildexcellentwebsit.es.",
-  "author": "Lene Saile",
+  "name": "Allard de Winter's Website",
+  "version": "1.0",
+  "description": "A personal website showcasing my work, thoughts, and projects.",
+  "author": "Allard de Winter",
   "license": "ISC",
   "type": "module",
   "engines": {
@@ -22,7 +22,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/madrilene/eleventy-excellent.git"
+    "url": "https://github.com/allarddewinter/my-blog.git"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

@@ -61,7 +61,6 @@ blockquote > * + * {
 blockquote :last-child {
   font-family: var(--font-base);
   font-style: normal;
-  font-size: var(--size-step-1);
 }
 
 input,

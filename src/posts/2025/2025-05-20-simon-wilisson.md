@@ -1,11 +1,13 @@
 ---
-title: Inspired by Simon Willison: Owning My Digital Space
+title: "Inspired by Simon Willison: Owning My Digital Space"
 description: Exploring how Simon Willison's work and approach to technology and society inspired me to build my own website and continue coding.
 date: 2025-05-20
 tags: [Technology, Inspiration, Personal]
 ---
 
-Thanks to Simon Willison, you are now reading this blog. He is the one who inspired me to get my own site up and running and publish here instead of using one of the social media giants. His personal website, [simonwillison.net](https://simonwillison.net/), nicely demonstrates the value of owning your digital narrative and sharing knowledge freely.
+Thanks to Simon Willison, you are now reading on this website. 
+
+He is the one who inspired me to get my own site up and running and publish here instead of using one of the social media giants. His personal website, [simonwillison.net](https://simonwillison.net/), nicely demonstrates the value of owning your digital narrative and sharing knowledge freely.
 
 >Simon Willison is the creator of Datasette, an open source tool for exploring and publishing data. He currently works full-time building open source tools for data journalism, built around Datasette and SQLite.
 >
@@ -21,8 +23,8 @@ Beyond inspiring me to build my own platform, Simon is also an exceptional coder
 
 I particularly appreciate how he shares his deep dives into Large Language Models (LLMs), practical coding techniques, and technology trends. These provide really good insight and overview, and inspire me to experiment and build things myself.
 
-## Contributing to Society
+## Contributing to the Common Good
 
-He also inspires me to contribute to a better society. His work supporting the press with his Datasette tooling and workshops is a great example of using technology for public good.
+I also really like that he is committed to helping the common good; his Datasette tooling and workshops for the press are a great example of using technology to benefit everyone.
 
 Overall, Simon Willison's technical expertise, commitment to open source, and focus on using technology for positive impact makes him an inspiring person!
