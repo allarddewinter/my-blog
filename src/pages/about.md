@@ -5,7 +5,7 @@ description: 'Eleventy Excellent is inspired by the companion website of Andy Be
 layout: page
 ---
 
-This  uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template.
+This starter uses modern CSS, fluid type & space, flexible Layouts and Progressive Enhancement, wrapped in a basic template.
 
 It is built around the CSS boilerplate by Andy Bell and inspired by Andy's talk **'Be the browser’s mentor, not its micromanager'**.
 
