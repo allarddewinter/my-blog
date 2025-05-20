@@ -1,7 +1,7 @@
 export const url = process.env.URL || 'http://localhost:8080';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'Linkblog on tech and strategy'; // i.e. Andy Bell - the name of the site. Must be set.
+export const siteName = 'Allard de Winter's blog'; // i.e. Andy Bell - the name of the site. Must be set.
 export const siteDescription = 'Allard de Winter - a linkblog on tech and strategy.'; // i.e. Andy Bell - the description of the site. Must be set.
 export const siteType = 'Person'; // schema
 export const locale = 'en_EN';
