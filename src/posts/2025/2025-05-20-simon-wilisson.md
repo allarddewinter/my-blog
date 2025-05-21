@@ -29,4 +29,4 @@ I particularly appreciate how he shares his deep dives into Large Language Model
 
 I also appreciate his commitment to helping the common good. His Datasette tooling and workshops for the press are a great example of using technology to benefit everyone.
 
-Overall, Simon Willison's technical expertise, commitment to open source, and focus on using technology for positive impact make him a truly inspiring person!
+Overall, Simon Willison's technical expertise, commitment to open source, and focus on the common good make him an inspiring person!
