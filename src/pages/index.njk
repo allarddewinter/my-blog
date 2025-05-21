@@ -1,29 +1,29 @@
 ---
 layout: base
 permalink: /index.html
-title: 'Tech & Strategy Insights'
-description: 'Welcome to Allards personal linkblog!'
+title: 'Allard de Winter''s Insights: Tech, Strategy & Mindset'
+description: 'Exploring the intersection of technology, strategic thinking, and a positive mindset. Insights from Allard de Winter.'
 blog:
-  title: 'Blog'
-  intro: "I'm showing the last 4 blog posts, but there might be more!"
+  title: 'Latest Posts'
+  intro: "Here are the most recent posts. Dive in to explore insights on technology, strategy, and mindset."
 ---
 
 <div class="wrapper">
   <header class="full | section" style="--spot-color: var(--color-primary)">
     <div class="section__inner flow region">
-      <h1 class="text-center" style="color: var(--color-light);">{{ title }}</h1>
     </div>
     {% svg "divider/waves", null, "divider" %}
   </header>
 
   <article class="full | region">
-    <div class="wrapper flow prose"> {# Using theme's utility classes likely helps #}
-      <h1>Welcome to Tech & Strategy Insights</h1>
+    <div class="wrapper flow prose">
+      <h1>Welcome to Allard's Insights</h1>
       <p>
-        This blog explores the intersection of technology and strategic thinking.
-        Here you'll find analysis, tutorials, and commentary on... [elaborate]
+        This space is dedicated to exploring the intersection of technology, strategic thinking, and a positive mindset. Drawing inspiration from figures like Simon Willison's linkblogging approach, Will Larsen's strategic perspectives, and Michael Pilarczyk's philosophy on personal growth, I share insights on building robust systems, making effective decisions, and cultivating a resilient, optimistic outlook.
       </p>
-      {# Add more sections as needed #}
+      <p>
+        Here you'll find thoughts on web development (especially static sites like this one!), business strategy, productivity techniques, and reflections on fostering a positive approach to life and work.
+      </p>
     </div>
   </article>
 
@@ -35,11 +35,11 @@ blog:
       {% endif %}
       <div class="feature |  region region-space-l">
         <custom-masonry layout="50-50">
-          {% set itemList = collections.allPosts %}
-					{% asyncEach item in itemList.slice(0, 4) %}
+          {% set itemList = collections.allPosts | reverse %} {# Reverse the collection to get most recent first #}
+                                        {% asyncEach item in itemList.slice(0, 4) %}
             {% set headingLevel = "h3" %}
-						{% include "partials/card-blog.njk" %}
-					{% endeach %}
+                                                {% include "partials/card-blog.njk" %}
+                                        {% endeach %}
         </custom-masonry>
       </div>
     </div>
