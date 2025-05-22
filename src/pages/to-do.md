@@ -15,3 +15,4 @@ permalink: /to-do/index.html
 - [ ] Change og-images background
 - [ ] Update colors
 - [ ] Make these checkboxes render as checkboxes
+- [ ] Get email working
