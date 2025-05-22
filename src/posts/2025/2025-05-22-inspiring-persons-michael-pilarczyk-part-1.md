@@ -1,7 +1,7 @@
 ---
 title: "Inspiring Persons: Michael Pilarczyk (Part 1)"
 description: "Introducing Michael Pilarczyk and how his mindset principles, particularly on visualisation and opportunity, have impacted my life."
-date: YYYY-MM-DD
+date: 2025-05-22
 tags: [mindset, michael pilarczyk, inspiration]
 ---
 
