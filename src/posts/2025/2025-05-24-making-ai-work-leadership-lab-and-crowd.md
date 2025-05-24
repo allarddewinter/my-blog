@@ -7,7 +7,7 @@ tags: [technology, ai, leadership]
 
 Once again, Ethan Mollick delivers an interesting piece. I absolutely feel the need for the things he describes in my own experience.
 
-{% image "assets/images/posts/370e328b-e4a5-4291-ae86-f06ad0df45fb_738x627.webp", "Image illustrating the areas" %}
+{% image "/assets/images/posts/370e328b-e4a5-4291-ae86-f06ad0df45fb_738x627.webp", "Image illustrating the areas" %}
 
 -   **Leadership**
     -   **Function**: Vision Setting
