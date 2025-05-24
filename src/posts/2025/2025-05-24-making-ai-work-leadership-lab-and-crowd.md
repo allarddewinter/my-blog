@@ -5,9 +5,21 @@ date: 2025-05-24
 tags: [technology, ai, leadership]
 ---
 
-Once again, Ethan Mollick delivers an interesting piece. I absolutely feel the need for the things he describes in my own experience.
+Once again, Ethan Mollick has written an interesting piece. I absolutely feel the need for the things he describes in my own experience.
 
 {% image "assets/images/posts/370e328b-e4a5-4291-ae86-f06ad0df45fb_738x627.webp", "Image illustrating the post topic" %}
+
+-   **Leadership**
+    -   **Function**: Vision Setting
+    -   **People**: Company leaders (e.g., CEOs, executives)
+
+-   **The Crowd**
+    -   **Function**: Performance Innovation
+    -   **People**: Employees across departments
+
+-   **The Lab**
+    -   **Function**: Product Development
+    -   **People**: Subject matter experts, technologists, and non-technologists
 
 [Link to original article](https://open.substack.com/pub/oneusefulthing/p/making-ai-work-leadership-lab-and)
 
@@ -18,8 +30,3 @@ Once again, Ethan Mollick delivers an interesting piece. I absolutely feel the n
 > When research that once took weeks now takes minutes, the bottleneck isn't the research anymore, it's figuring out what research to do. When code can be written quickly, the limitation isn't programming speed, it's understanding what to build. When content can be generated instantly, the constraint isn't production, it's knowing what will actually matter to people.
 
 > The key is treating AI adoption as an organizational learning challenge, not merely a technical one.
-
-## Suggestions
-*   Consider adding a brief concluding sentence reflecting on which of Mollick's points feels most critical or challenging in practice.
-*   Ensure the link is clearly visible and accessible. (Already done with Markdown link format).
-*   Review the automatically generated alt text for the image (`"Image illustrating the post topic"`) and update it if a more specific description is available.
