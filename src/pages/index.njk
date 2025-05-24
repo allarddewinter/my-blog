@@ -20,7 +20,7 @@ blog:
     <div class="wrapper flow prose">
       <h3>{{ description }}</h3>
       <p>
-        Welcome to my space for exploring technology, strategic thinking, and a positive mindset. Here, I share insights, bookmarks, and reflections inspired by approaches like Simon Willison's linkblogging, Will Larsen's strategic perspectives, and Michael Pilarczyk's philosophy. My aim is to explore building robust systems, making effective decisions, and cultivating a resilient, optimistic outlook. Learn more about the site and my background on the <a href="/about/">About page</a>.
+        Welcome to my 'linkblog'; a space for exploring technology, strategic thinking, and a positive mindset. Here, I share insights, bookmarks, and reflections inspired by approaches like Simon Willison's linkblogging, Will Larsen's strategic perspectives, and Michael Pilarczyk's philosophy. My aim is to explore building robust systems both in organisations and tech, making effective decisions, and cultivating a resilient, optimistic outlook. Learn more about the site and my background on the <a href="/about/">About page</a>.
       </p>
     </div>
   </article>
@@ -33,7 +33,7 @@ blog:
       {% endif %}
       <div class="feature |  region region-space-l">
         <custom-masonry layout="50-50">
-          {% set itemList = collections.allPosts | reverse %} {# Reverse the collection to get most recent first #}
+          {% set itemList = collections.allPosts %}
                                         {% asyncEach item in itemList.slice(0, 4) %}
             {% set headingLevel = "h3" %}
                                                 {% include "partials/card-blog.njk" %}
