@@ -1,9 +1,8 @@
-
 ---
 title: "Simon Willison on Building with LLMs (PyCon 2025)"
 description: "A link to Simon Willison's PyCon 2025 tutorial materials on building applications with llms"
 date: 2025-05-25
-tags: [technology, llm, links]
+tags: [technology, llm, tutorials]
 ---
 
 Came across this neat tutorial on building LLM-powered applications from Simon Willison, which he shared via his newsletter.
