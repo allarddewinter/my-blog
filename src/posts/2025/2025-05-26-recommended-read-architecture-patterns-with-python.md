@@ -1,8 +1,8 @@
 ---
 title: "A Recommended Read: Architecture Patterns with Python"
 description: "An in-depth guide to architectural patterns in Python, focusing on practical examples, TDD, and DDD."
-date: 2023-10-27
-tags: [technology, resources, python]
+date: 2025-05-26
+tags: [technology, books, architecture]
 ---
 
 I came across 'Architecture Patterns with Python' by Harry Percival and Bob Gregory, also known as 'Cosmic Python'. Released in March 2020 by O'Reilly Media, this book is a really nice, in-depth guide to architectural patterns specifically for Python developers.
