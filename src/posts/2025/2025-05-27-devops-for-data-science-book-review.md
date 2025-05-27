@@ -5,7 +5,7 @@ date: 2025-05-27
 tags: [technology, books, devops]
 ---
 
-Following up on the discussion about DevOps from an engineer's perspective, I wanted to share some thoughts on Alex K Gold's book, ["DevOps for Data Science"](https://do4ds.com/).
+Following up on the discussion about DevOps from an engineer's perspective (as covered in a [previous post](https://allarddewinter.net/blog/yevgeniy-brikman-on-devops-from-an-engineers-perspective/)), I wanted to share some thoughts on Alex K Gold's book, ["DevOps for Data Science"](https://do4ds.com/).
 
 This book offers a clear introduction to DevOps specifically for the data science field. Given the diverse backgrounds these special creatures called data scientists often have, the explanations start at a very accessible level. For instance, it covers foundational concepts like how an SSH connection is established and notes that Python and R are primarily single-threaded.
 
@@ -28,8 +28,8 @@ Here is a relatable moment from the book that made me smile 🤭:
 >
 > This may be obvious to you, but needing to do data science on real data in dev is a common source of friction with IT/Admins.[…]
 
-This highlights a common point of friction and the book's intention on bridging the gap between data science needs and IT realities.
+This highlights a common point of friction and the book's focus on bridging the gap between data science needs and IT realities.
 
-Overall, "DevOps for Data Science" is a valuable resource for anyone looking to understand or implement DevOps principles in a data science context, providing a easy to understand explanations and some practical guidance.
+Overall, "DevOps for Data Science" is a valuable resource for anyone looking to understand or implement DevOps principles in a data science context, providing easy-to-understand explanations and some practical guidance.
 
 {% image "/assets/images/posts/DevOps for Data Science.jpg", "Cover of the book 'DevOps for Data Science' by Alex K Gold", [300, 600] %}
