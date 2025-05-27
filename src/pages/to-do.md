@@ -13,6 +13,8 @@ permalink: /to-do/index.html
 - [ ] Logo design & favicon
 - [ ] Update about page
 - [ ] Change og-images background
-- [ ] Update colors
-- [ ] Make these checkboxes render as checkboxes
-- [ ] Get email working
+- [ ] CSS: Update colors
+- [x] Make these checkboxes render as checkboxes
+- [x] Get email working
+- [ ] CSS: Update some css; text smaller, epecially quotes and have these checkboxes larger
+- [ ] CSS: Make image only % width
