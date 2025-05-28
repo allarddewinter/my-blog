@@ -1,7 +1,7 @@
 ---
 title: "Notes on The Startup CTO's Handbook by Zach Goldberg"
 description: "Reflections on Zach Goldberg's handbook, valuable for startup CTOs and anyone in tech leadership or engineering."
-date: 2025-05-27
+date: 2025-05-28
 tags: [technology, leadership, resources]
 ---
 
