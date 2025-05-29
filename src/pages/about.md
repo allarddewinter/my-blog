@@ -7,11 +7,13 @@ layout: page
 
 ## What I Do
 
-My work centres on bridging the gap between technical possibilities and strategic business needs, focusing on building practical, robust technology solutions in data science, analytics and the underlying platform.
+## What I Do
 
-As a Technical Authority and Domain Architect, I shape technology roadmaps and establish clear governance. My background includes experience in data analytics, data science, and cloud platforms (particularly Microsoft Azure and Databricks), which informs my approach to building scalable and effective systems.
+My professional journey centres on leveraging technology and strategic thinking to build robust, practical solutions, primarily within the energy sector across Europe and Africa. I am deeply passionate about sustainability and using data and architecture to drive positive change.
 
-I am passionate about creating clear architectural strategies that align stakeholders and empower teams, ensuring technology delivers value both now and in support of future goals.
+As a Technical Authority and Domain Architect, I bridge the gap between technical possibilities and strategic business needs. My work involves shaping technology roadmaps, establishing clear governance, and applying my background in data analytics, data science, and cloud platforms to build scalable and effective systems.
+
+I am driven by the challenge of breaking down complex problems, looking beyond existing boundaries, and providing clear insights that empower teams and deliver tangible value aligned with future goals.
 
 ## Why I Build This Website
 
