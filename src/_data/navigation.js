@@ -11,8 +11,8 @@ export default {
   ],
   bottom: [
     {
-      text: 'Style guide',
-      url: '/styleguide/'
+      text: 'Sustainability',
+      url: '/sustainability/'
     },
     {
       text: 'ToDo',
