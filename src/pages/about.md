@@ -7,13 +7,11 @@ layout: page
 
 ## What I Do
 
-## What I Do
+My professional life is all about leveraging technology and strategic thinking to build robust, practical solutions. I primarily work within the energy sector across Europe, and I even had the opportunity to work in Rwanda and Madagascar. What really drives me is sustainability, using data and smart architecture to create real, positive change.
 
-My professional journey centres on leveraging technology and strategic thinking to build robust, practical solutions, primarily within the energy sector across Europe and Africa. I am deeply passionate about sustainability and using data and architecture to drive positive change.
+As a Technical Authority and Domain Architect, I see my role as bridging the gap between what's technically possible and what the business truly needs. This means I help shape technology roadmaps, establish clear governance, and apply my background in data analytics, data science, and cloud platforms to build systems that are not just effective, but also scalable for the future.
 
-As a Technical Authority and Domain Architect, I bridge the gap between technical possibilities and strategic business needs. My work involves shaping technology roadmaps, establishing clear governance, and applying my background in data analytics, data science, and cloud platforms to build scalable and effective systems.
-
-I am driven by the challenge of breaking down complex problems, looking beyond existing boundaries, and providing clear insights that empower teams and deliver tangible value aligned with future goals.
+I like breaking down complex problems, looking beyond existing boundaries, and providing clear insights. These insights always come from understanding not just the technical possibilities, but also the true business needs and value.
 
 ## Why I Build This Website
 
