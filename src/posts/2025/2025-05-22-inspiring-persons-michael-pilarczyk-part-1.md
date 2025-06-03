@@ -15,7 +15,7 @@ For me, this isn't about magic or passive wishing. It's about the active process
 
 ## Key takeaways from Master Your Mindset
 
-{% image "/assets/images/posts/masteryourmindset-book.jpg", "Cover of the book Master Your Mindset by Michael Pilarczyk" %}
+{% image "/assets/images/posts/masteryourmindset-book.jpg", "Cover of the book Master Your Mindset by Michael Pilarczyk", style="width: 50%;" %}
 
 Michael's book, 'Master Your Mindset', offers practical tools for this. Here are some key takeaways:
 
