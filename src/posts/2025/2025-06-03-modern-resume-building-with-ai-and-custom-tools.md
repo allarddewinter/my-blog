@@ -73,7 +73,7 @@ Next, I asked it to build the app, and voilà, it created an app that worked in 
 
 I've hosted it using GitHub Pages, so you can try it for yourself. Here is the link: [https://allarddewinter.github.io/rxresume-json-markdown-converter/](https://allarddewinter.github.io/rxresume-json-markdown-converter/).
 
-This has been absolute fun to make! Using code (HTML, CSS, JavaScript), which I only have limited experience with, saves me a lot of hassle proofreading the LLM. The output is instant, and it saves tokens used (although I don't think that really saves a lot of money). It also touches on the environmental impact, a topic Simon Willison has explored recently:
+This has been absolute fun to make! Using code (HTML, CSS, JavaScript), which I only have limited experience with, saves me a lot of hassle proofreading the LLM. The output is instant, and it saves tokens used (although I don't think that really saves a lot of money). As a last note, you could say it also touches on the environmental impact, Simon Willison's recent posts offer a good perspective on this, suggesting that for typical personal use, it's not as significant as some might fear:
 
 > Developers burning through $100 of tokens per day (not impossible given some of the LLM-heavy development patterns that are beginning to emerge) could end the year with the equivalent of a short haul flight or 600 mile car journey.
 > (Source: [https://simonwillison.net/2025/May/20/ai-energy-footprint/](https://simonwillison.net/2025/May/20/ai-energy-footprint/) and [https://simonwillison.net/2025/May/6/whats-the-carbon-footprint-of-using-chatgpt/](https://simonwillison.net/2025/May/6/whats-the-carbon-footprint-of-using-chatgpt/))
