@@ -11,7 +11,7 @@ permalink: /to-do/index.html
 
 - [x] Deploy 🚀
 - [ ] Logo design & favicon
-- [ ] Update about page
+- [x] Update about page
 - [ ] Change og-images background
 - [ ] CSS: Update colors
 - [x] Make these checkboxes render as checkboxes
