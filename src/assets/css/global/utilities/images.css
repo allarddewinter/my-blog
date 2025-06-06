@@ -1,0 +1,21 @@
+/* Image sizing utilities */
+.image-width-75 {
+  max-inline-size: 75%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.image-width-50 {
+  max-inline-size: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.image-width-25 {
+  max-inline-size: 25%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
