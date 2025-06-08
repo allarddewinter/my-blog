@@ -19,6 +19,8 @@ These steps are designed to prevent common pitfalls and provide a robust path fr
 
 ### Exploration: gathering the facts on ML platform options
 
+{% image "/assets/images/posts/hero-explore.png", "All phases in strategy, exploration highlighted" %}
+
 The exploration phase provides the opportunity to gather comprehensive information about potential ML platforms without premature commitment. It is about understanding the practical realities of different solutions and avoiding the trap of simply adopting what is familiar or trendy, as Will cautions.
 
 For our context, this means:
