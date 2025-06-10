@@ -46,7 +46,8 @@ I started with a similar prompt, but this one proved more challenging. It requir
 > img.onerror @ markdown-to-onenote.html:823
 > ```
 
-Through iterative refinement, we eventually arrived at a working solution. The final result handles Markdown formatting and converts it properly to OneNote's format. However, it still has some limitations, such as not supporting more than one diagram. I would like to improve this, but I have to dive into what the real problem is.
+Through iterative refinement, we eventually arrived at a working solution. The final result handles Markdown formatting and converts it properly to OneNote's format. ~~However, it still has some limitations, such as not supporting more than one diagram. I would like to improve this, but I have to dive into what the real problem is.~~* 
+*Fully working now for mupliple diagrams in one page.
 
 You can try the tools here:
 - [PDF to Markdown Converter](https://allarddewinter.github.io/pdf-to-markdown-converter) ([source code](https://github.com/allarddewinter/pdf-to-markdown-converter))
