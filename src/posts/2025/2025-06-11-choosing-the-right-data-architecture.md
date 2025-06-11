@@ -7,7 +7,8 @@ tags: [technology, architecture, data]
 
 This post summarises an article by Dr. Fatih Hattatoglu on Medium, exploring different data architecture choices from a data engineer's perspective. The article highlights the importance of data as a valuable asset and the need for flexible solutions to manage the increasing volume and diversity of data, particularly as use cases continue to grow, including those in machine learning and AI.
 
-{% image "/assets/images/posts/1749632950319.png", "A clay model of a data lakehouse created by recraft.ai", "A 'data lakehouse' from clay, made by [recraft.ai](https://recraft.ai)", null, "eager", null, "image-width-75" %}
+{% image "/assets/images/posts/1749632950319.png", "A clay model of a data lakehouse created by recraft.ai", "A 'data lakehouse' from clay, made by <a href=\"https://www.recraft.ai/\">recraft.ai</a>", "eager", null, "image-width-75" %}
+
 
 As Dr. Hattatoglu notes:
 
