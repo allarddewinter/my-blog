@@ -5,7 +5,7 @@ title: 'Allard de Winter''s Insights & Bookmarks'
 description: 'Exploring the intersection of technology, strategic thinking, and a positive mindset.'
 blog:
   title: 'Latest Posts'
-  intro: "Here are the most recent posts. Dive in to explore insights on technology, strategy, and mindset."
+  intro: "Here are the most recent posts. Dive in to explore insights on technology, strategy, and mindset. <a href="/blog/">See all posts.</a>"
 ---
 
 <div class="wrapper">
@@ -34,7 +34,7 @@ blog:
       <div class="feature |  region region-space-l">
         <custom-masonry layout="50-50">
           {% set itemList = collections.allPosts %}
-                                        {% asyncEach item in itemList.slice(0, 4) %}
+                                        {% asyncEach item in itemList.slice(0, 6) %}
             {% set headingLevel = "h3" %}
                                                 {% include "partials/card-blog.njk" %}
                                         {% endeach %}
