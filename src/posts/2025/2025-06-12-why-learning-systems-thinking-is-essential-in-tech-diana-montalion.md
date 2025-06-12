@@ -2,15 +2,12 @@
 title: "Why learning systems thinking is essential in tech"
 description: "Diana Montalion discusses how systems thinking helps align stakeholders and improve technical outcomes through better modeling and collaboration."
 date: 2025-06-12
-tags: [technology, systems-thinking, collaboration, systems engineering]
+tags: [technology, systems-thinking, systems engineering, podcast]
 ---
 
 Today I listened to Diana Montalion's insightful conversation on the [Tech Lead Journal podcast](https://techleadjournal.dev/episodes/219/) about systems thinking in technology. She shares her perspective on how relationships between components create effects and why it is important to have this holistic view.
 
-<custom-youtube
-  @slug="jyNIACaTk9I"
-  @label="Why Learning Systems Thinking is Essential in Tech - Diana Montalion">
-</custom-youtube>
+<lite-youtube videoid="jyNIACaTk9I" playlabel="Why Learning Systems Thinking is Essential in Tech - Diana Montalion"></lite-youtube>
 
 Some takeaways from the conversation include:
 
