@@ -3,7 +3,31 @@ title: "About Allard de Winter"
 permalink: /about/index.html
 description: "Allard de Winter's background in technology and strategy, and the purpose of this website."
 layout: page
+css: about
 ---
+
+<style>
+  .portrait-wrap {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    max-width: 300px;
+    border: 1px solid var(--color-border);
+    padding: 0.5rem;
+    background: var(--color-bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  @media (max-width: 768px) {
+    .portrait-wrap {
+      float: none;
+      margin: 0 auto 1.5rem;
+    }
+  }
+</style>
+
+<div class="portrait-wrap">
+  {% image "/assets/images/gallery/retro-pop-allard-formal.png", "Portrait of Allard de Winter", null, "eager" %}
+</div>
 
 ## What I Do
 
@@ -11,7 +35,7 @@ My professional life is all about leveraging technology and strategic thinking t
 
 As a Technical Authority and Domain Architect, I see my role as bridging the gap between what's technically possible and what the business truly needs. This means I help shape technology roadmaps, establish clear governance, and apply my background in data analytics, data science, and cloud platforms to build systems that are not just effective, but also scalable for the future.
 
-I like breaking down complex problems, looking beyond existing boundaries, and providing clear insights. These insights always come from understanding not just the technical possibilities, but also the true business needs and value.
+I like breaking down complex problems, looking beyond existing boundaries, and providing clear insights. These insights always come from understanding not just the technical possibilities, but also the true business needs and value. 
 
 ## Why I Build This Website
 
