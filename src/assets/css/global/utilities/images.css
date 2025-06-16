@@ -1,21 +1,25 @@
-/* Image sizing utilities */
+/* Responsive image sizing utilities */
+.image-width-25,
+.image-width-50,
 .image-width-75 {
-  max-inline-size: 75%;
-  height: auto;
-  margin: 0 auto;
+  --image-max-width: 100%;
+  --image-margin: var(--space-s) auto;
+  
   display: block;
+  width: var(--image-max-width);
+  max-inline-size: var(--image-max-width);
+  height: auto;
+  margin: var(--image-margin);
 }
 
-.image-width-50 {
-  max-inline-size: 50%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+@media (min-width: 30em) {
+  .image-width-75 { --image-max-width: min(75%, 45rem); }
+  .image-width-50 { --image-max-width: min(50%, 30rem); }
+  .image-width-25 { --image-max-width: min(25%, 15rem); }
 }
 
-.image-width-25 {
-  max-inline-size: 25%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+@media (min-width: 60em) {
+  .image-width-75 { --image-margin: var(--space-m) auto; }
+  .image-width-50 { --image-margin: var(--space-m) auto; }
+  .image-width-25 { --image-margin: var(--space-m) auto; }
 }
