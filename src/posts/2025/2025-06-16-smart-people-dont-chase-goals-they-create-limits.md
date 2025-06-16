@@ -1,5 +1,5 @@
 ---
-title: "Smart People Don't Chase Goals; They Create Limits"
+title: "Smart People Don't Chase Goals - They Create Limits"
 description: "Exploring how setting boundaries and constraints can be more effective than traditional goal-setting, especially in complex environments like software development."
 date: 2025-06-16
 tags: [strategy, productivity, mindset, leadership]
