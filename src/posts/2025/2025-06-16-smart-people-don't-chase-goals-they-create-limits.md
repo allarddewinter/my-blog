@@ -9,6 +9,8 @@ Recently, Joan Westenberg shared an interesting article, "[Smart People Don't Ch
 
 I have found that communicating "guardrails" and then checking that they are applied is often much more effective than dictating precise steps. This approach allows developers the freedom to innovate and use their imagination, rather than being stifled by overly prescriptive instructions. In systems engineering, for instance, defining clear non-functional requirements like performance thresholds or security protocols allows teams to design creative solutions that meet the system's core needs without being told exactly how to build them.
 
+{% image "/assets/images/posts/create-an-image-of-a-child-building-a-tower-with-b.png", "image of a child building by recraft.ai", "... or do you?", "eager", null, "image-width-50" %}
+
 Think about it in terms of raising children. It is not very effective to set the goal of "having a nice afternoon". Instead, it is much more productive to stimulate their creativity by providing an environment with clear boundaries, within which they can explore and play freely. This allows them to develop their own ideas and solutions, leading to a much more engaging and positive outcome.
 
 Joan writes about it as follows:
