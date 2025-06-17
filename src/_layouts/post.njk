@@ -2,7 +2,13 @@
 layout: base
 schema: BlogPosting
 ---
-
+<article 
+  data-pagefind-body 
+  data-pagefind-meta="title:{{ title }}"
+  data-pagefind-meta="description:{{ description }}"
+  data-pagefind-meta="tags:{{ tags | join(', ') }}"
+  data-pagefind-meta="date:{{ date }}"
+>
 <div class="region" style="--region-space-top: var(--space-xl-2xl)">
   <div class="wrapper flow prose">
     <h1 class="gradient-text">{{ title }}</h1>
@@ -51,3 +57,4 @@ schema: BlogPosting
   {%- include 'css/post.css' -%}
   {%- include 'css/footnotes.css' -%}
 {%- endcss -%}
+</article>

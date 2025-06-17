@@ -2,7 +2,7 @@
 title: "A clear framework for the build vs. buy decision"
 description: "A reflection on a simple yet powerful rule for deciding when to build software versus buying it, inspired by an article from Entropic Thoughts."
 date: 2025-06-17
-tags: [strategy, build vs buy, links]
+tags: [strategy, build vs buy, decision making, links]
 ---
 
 {% image "/assets/images/posts/1750147514194.png", "Decision tree", null, "eager", null, "image-width-50" %}

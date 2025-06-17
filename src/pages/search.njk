@@ -1,0 +1,48 @@
+---
+title: Search
+layout: base
+permalink: /search/index.html
+description: Search through all posts and pages
+---
+
+<div class="wrapper flow region" style="--region-space-top: var(--space-xl-2xl)">
+  <h1 class="gradient-text">{{ title }}</h1>
+  
+  <div id="search"></div>
+</div>
+
+<!-- Add PageFind UI styles and script -->
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ 
+            element: "#search",
+            showSubResults: true,
+            showImages: true,
+            excerptLength: 100,
+            debounceTimeoutMs: 500,
+            resetStyles: false
+        });
+    });
+</script>
+
+{% css %}
+/* Custom PageFind styling to match your site theme */
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--color-primary);
+  --pagefind-ui-text: var(--color-text);
+  --pagefind-ui-background: var(--color-bg);
+  --pagefind-ui-border: var(--color-bg-accent);
+  --pagefind-ui-tag: var(--color-bg-accent-2);
+}
+
+.dark {
+  --pagefind-ui-text: var(--color-text);
+  --pagefind-ui-background: var(--color-bg);
+  --pagefind-ui-border: var(--color-bg-accent);
+  --pagefind-ui-tag: var(--color-bg-accent-2);
+}
+{% endcss %}
