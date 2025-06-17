@@ -5,7 +5,7 @@ date: 2025-06-17
 tags: [strategy, build vs buy, links]
 ---
 
-{% image "/assets/images/posts/1750147514194.png", "Decision tree" %}
+{% image "/assets/images/posts/1750147514194.png", "Decision tree", null, "eager", null, "image-width-50" %}
 
 In my career, I have more than once encountered the 'build versus buy' dilemma. Many organisations have a policy that looks something like this: first, try to use an existing internal product; if not, buy an off-the-shelf solution; and only as a last resort, build it yourself. While this provides a sequence, it often lacks the nuance needed to make an effective decision.
 
