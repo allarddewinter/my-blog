@@ -1,0 +1,312 @@
+<template webc:type="11ty" 11ty:type="njk">
+<div class="header-search">
+  <button type="button" class="search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="search-modal">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.35-4.35"></path>
+    </svg>
+    <span class="search-toggle-text">Search</span>
+  </button>
+
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title" hidden>
+    <div class="search-modal-backdrop"></div>
+    <div class="search-modal-content">
+      <header class="search-modal-header">
+        <h2 id="search-modal-title" class="search-modal-title">Search</h2>
+        <button type="button" class="search-modal-close" aria-label="Close search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </header>
+
+      <div class="search-modal-body">
+        <div class="search-input-container">
+          <label for="header-search-input" class="visually-hidden">Search query</label>
+          <input 
+            type="search" 
+            id="header-search-input" 
+            class="search-input"
+            placeholder="Search articles, topics, or keywords..."
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button type="button" class="search-clear" aria-label="Clear search" hidden>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-status" aria-live="polite" aria-atomic="true"></div>
+        
+        <div class="search-results" id="header-search-results" role="region" aria-label="Search results">
+          <!-- Results will be populated here by JavaScript -->
+        </div>
+
+        <div class="search-footer">
+          <a href="/search/" class="search-full-page-link">View all search options →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  // Header search functionality with modern Pagefind 1.0+
+  class HeaderSearch {
+    constructor() {
+      this.pagefind = null;
+      this.isInitialized = false;
+      this.debounceTimer = null;
+      
+      this.elements = {
+        toggle: null,
+        modal: null,
+        backdrop: null,
+        close: null,
+        input: null,
+        clear: null,
+        status: null,
+        results: null
+      };
+
+      this.init();
+    }
+
+    async init() {
+      this.bindElements();
+      this.bindEvents();
+      this.setupKeyboardShortcuts();
+    }
+
+    bindElements() {
+      this.elements.toggle = document.querySelector('.search-toggle');
+      this.elements.modal = document.querySelector('.search-modal');
+      this.elements.backdrop = document.querySelector('.search-modal-backdrop');
+      this.elements.close = document.querySelector('.search-modal-close');
+      this.elements.input = document.querySelector('#header-search-input');
+      this.elements.clear = document.querySelector('.search-modal .search-clear');
+      this.elements.status = document.querySelector('.search-modal .search-status');
+      this.elements.results = document.querySelector('#header-search-results');
+    }
+
+    bindEvents() {
+      if (this.elements.toggle) {
+        this.elements.toggle.addEventListener('click', () => this.openModal());
+      }
+
+      if (this.elements.close) {
+        this.elements.close.addEventListener('click', () => this.closeModal());
+      }
+
+      if (this.elements.backdrop) {
+        this.elements.backdrop.addEventListener('click', () => this.closeModal());
+      }
+
+      if (this.elements.input) {
+        this.elements.input.addEventListener('input', (e) => this.handleInput(e));
+        this.elements.input.addEventListener('keydown', (e) => this.handleKeydown(e));
+      }
+
+      if (this.elements.clear) {
+        this.elements.clear.addEventListener('click', () => this.clearSearch());
+      }
+
+      // Close modal on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !this.elements.modal.hidden) {
+          this.closeModal();
+        }
+      });
+    }
+
+    setupKeyboardShortcuts() {
+      // Ctrl+K or Cmd+K to open search
+      document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          this.openModal();
+        }
+      });
+    }
+
+    async openModal() {
+      if (!this.isInitialized) {
+        await this.initializePagefind();
+      }
+
+      this.elements.modal.hidden = false;
+      this.elements.toggle.setAttribute('aria-expanded', 'true');
+      
+      // Focus the input
+      setTimeout(() => {
+        this.elements.input.focus();
+      }, 100);
+
+      // Prevent body scroll
+      document.body.style.overflow = 'hidden';
+    }
+
+    closeModal() {
+      this.elements.modal.hidden = true;
+      this.elements.toggle.setAttribute('aria-expanded', 'false');
+      
+      // Clear search
+      this.clearSearch();
+      
+      // Restore body scroll
+      document.body.style.overflow = '';
+    }
+
+    async initializePagefind() {
+      try {
+        this.pagefind = await import('/pagefind/pagefind.js');
+        await this.pagefind.options({});
+        this.pagefind.init();
+        this.isInitialized = true;
+        console.log('✅ Header search initialized');
+      } catch (error) {
+        console.error('❌ Failed to initialize header search:', error);
+        this.showError('Search is currently unavailable');
+      }
+    }
+
+    handleInput(event) {
+      const query = event.target.value.trim();
+      
+      // Show/hide clear button
+      this.elements.clear.hidden = query.length === 0;
+      
+      // Debounce search
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(() => {
+        if (query.length > 0) {
+          this.performSearch(query);
+        } else {
+          this.clearResults();
+        }
+      }, 300);
+    }
+
+    handleKeydown(event) {
+      if (event.key === 'Escape') {
+        this.closeModal();
+      } else if (event.key === 'Enter') {
+        // Navigate to full search page with query
+        const query = this.elements.input.value.trim();
+        if (query) {
+          window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+        }
+      }
+    }
+
+    async performSearch(query) {
+      if (!this.pagefind) {
+        this.showError('Search is not ready yet');
+        return;
+      }
+
+      try {
+        this.showStatus('Searching...');
+        
+        const search = await this.pagefind.search(query);
+        
+        if (search.results.length === 0) {
+          this.showNoResults(query);
+          return;
+        }
+
+        // Limit to top 5 results for header search
+        const limitedResults = search.results.slice(0, 5);
+        const results = await Promise.all(
+          limitedResults.map(result => result.data())
+        );
+        
+        this.displayResults(results, query, search.results.length);
+        
+      } catch (error) {
+        console.error('Header search error:', error);
+        this.showError('Search error occurred');
+      }
+    }
+
+    displayResults(results, query, totalCount) {
+      const resultsHtml = results.map(result => {
+        const title = result.meta?.title || result.url;
+        const excerpt = result.excerpt || '';
+        
+          return `
+            <a href="${result.url}" class="search-result-item">
+              <div class="search-result-title">${this.highlightQuery(title, query)}</div>
+              ${result.meta?.date ? `<div class="search-result-date">${new Date(result.meta.date).toLocaleDateString()}</div>` : ''}
+              ${excerpt ? `<div class="search-result-excerpt">${this.highlightQuery(excerpt, query)}</div>` : ''}
+            </a>
+          `;
+      }).join('');
+
+      const showingText = totalCount > 5 ? `Showing 5 of ${totalCount} results` : `${totalCount} result${totalCount === 1 ? '' : 's'}`;
+      
+      this.elements.results.innerHTML = `
+        <div class="search-results-header">${showingText}</div>
+        <div class="search-results-list">${resultsHtml}</div>
+        ${totalCount > 5 ? `<div class="search-results-more"><a href="/search/?q=${encodeURIComponent(query)}">View all ${totalCount} results →</a></div>` : ''}
+      `;
+
+      this.elements.status.textContent = '';
+    }
+
+    highlightQuery(text, query) {
+      if (!text || !query) return text;
+      
+      const regex = new RegExp(`(${this.escapeRegex(query)})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    escapeRegex(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    showStatus(message) {
+      this.elements.status.textContent = message;
+      this.elements.status.className = 'search-status';
+    }
+
+    showError(message) {
+      this.elements.status.textContent = message;
+      this.elements.status.className = 'search-status search-status--error';
+    }
+
+    showNoResults(query) {
+      this.elements.results.innerHTML = `
+        <div class="search-no-results">
+          <p>No results found for "${query}"</p>
+          <a href="/search/?q=${encodeURIComponent(query)}">Try advanced search →</a>
+        </div>
+      `;
+      this.elements.status.textContent = '';
+    }
+
+    clearResults() {
+      this.elements.results.innerHTML = '';
+      this.elements.status.textContent = '';
+    }
+
+    clearSearch() {
+      this.elements.input.value = '';
+      this.elements.clear.hidden = true;
+      this.clearResults();
+    }
+  }
+
+  // Initialize header search when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => new HeaderSearch());
+  } else {
+    new HeaderSearch();
+  }
+</script>
+</template>
+</webc>

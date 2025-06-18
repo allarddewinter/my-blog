@@ -7,6 +7,14 @@ export default {
     {
       text: 'Posts',
       url: '/blog/'
+    },
+    {
+      text: 'Tags',
+      url: '/tags/'
+    },
+    {
+      text: 'Search',
+      url: '/search/',
     }
   ],
   bottom: [

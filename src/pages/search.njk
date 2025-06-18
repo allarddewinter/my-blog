@@ -1,0 +1,250 @@
+---
+title: Search
+description: Search through all blog posts and content
+layout: page
+permalink: /search/
+eleventyNavigation:
+  key: Search
+  order: 4
+---
+
+<div class="search-container">
+  <div class="search-header">
+    <p>Find articles, posts, and content across the site</p>
+  </div>
+
+  <div class="search-interface">
+    <div class="search-input-container">
+      <label for="search-input" class="visually-hidden">Search query</label>
+      <input 
+        type="search" 
+        id="search-input" 
+        class="search-input"
+        placeholder="Search articles, topics, or keywords..."
+        autocomplete="off"
+        spellcheck="false"
+        aria-describedby="search-help"
+      >
+      <button type="button" class="search-clear" aria-label="Clear search" hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div id="search-help" class="search-help">
+      <p>Start typing to search through all content. Use quotes for exact phrases.</p>
+    </div>
+
+    <div class="search-status" aria-live="polite" aria-atomic="true"></div>
+    
+    <div class="search-results" id="search-results" role="region" aria-label="Search results">
+      <!-- Results will be populated here by JavaScript -->
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  // Modern Pagefind 1.0+ implementation
+  let pagefind;
+  let searchInput;
+  let searchResults;
+  let searchStatus;
+  let searchClear;
+  let debounceTimer;
+
+  async function initializeSearch() {
+    try {
+      // Import Pagefind with modern v1.0+ API
+      pagefind = await import('/pagefind/pagefind.js');
+      
+      // Configure Pagefind before initialization
+      await pagefind.options({
+        // Add any custom options here if needed
+      });
+      
+      // Initialize Pagefind (modern v1.0+ pattern)
+      pagefind.init();
+      
+      console.log('✅ Pagefind initialized successfully');
+      
+      // Setup search interface
+      setupSearchInterface();
+      
+    } catch (error) {
+      console.error('❌ Failed to initialize Pagefind:', error);
+      showError('Search functionality is currently unavailable. Please try again later.');
+    }
+  }
+
+  function setupSearchInterface() {
+    searchInput = document.getElementById('search-input');
+    searchResults = document.getElementById('search-results');
+    searchStatus = document.querySelector('.search-status');
+    searchClear = document.querySelector('.search-clear');
+
+    if (!searchInput || !searchResults || !searchStatus) {
+      console.error('Search interface elements not found');
+      return;
+    }
+
+    // Search input event listeners
+    searchInput.addEventListener('input', handleSearchInput);
+    searchInput.addEventListener('keydown', handleKeydown);
+    
+    // Clear button
+    searchClear.addEventListener('click', clearSearch);
+
+    // Focus search input if URL has search parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+    if (query) {
+      searchInput.value = query;
+      performSearch(query);
+    }
+
+    // Focus search input on page load
+    searchInput.focus();
+  }
+
+  function handleSearchInput(event) {
+    const query = event.target.value.trim();
+    
+    // Show/hide clear button
+    searchClear.hidden = query.length === 0;
+    
+    // Debounce search
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      if (query.length > 0) {
+        performSearch(query);
+      } else {
+        clearResults();
+      }
+    }, 300);
+  }
+
+  function handleKeydown(event) {
+    // Handle escape key to clear search
+    if (event.key === 'Escape') {
+      clearSearch();
+    }
+  }
+
+  async function performSearch(query) {
+    if (!pagefind) {
+      showError('Search is not ready yet. Please try again in a moment.');
+      return;
+    }
+
+    try {
+      showStatus('Searching...');
+      
+      const search = await pagefind.search(query);
+      
+      if (search.results.length === 0) {
+        showNoResults(query);
+        return;
+      }
+
+      showStatus(`Found ${search.results.length} result${search.results.length === 1 ? '' : 's'}`);
+      
+      // Get detailed results
+      const results = await Promise.all(
+        search.results.map(result => result.data())
+      );
+      
+      displayResults(results, query);
+      
+    } catch (error) {
+      console.error('Search error:', error);
+      showError('An error occurred while searching. Please try again.');
+    }
+  }
+
+  function displayResults(results, query) {
+    const resultsHtml = results.map(result => {
+      const date = result.meta?.date ? new Date(result.meta.date).toLocaleDateString() : '';
+      const tags = result.meta?.tags ? result.meta.tags.split(', ') : [];
+      
+      return `
+        <article class="search-result">
+          <header class="search-result-header">
+            <h2 class="search-result-title">
+              <a href="${result.url}" class="search-result-link">
+                ${highlightQuery(result.meta?.title || result.url, query)}
+              </a>
+            </h2>
+            ${date ? `<time class="search-result-date">${date}</time>` : ''}
+          </header>
+          
+          ${result.excerpt ? `
+            <div class="search-result-excerpt">
+              ${highlightQuery(result.excerpt, query)}
+            </div>
+          ` : ''}
+          
+          ${tags.length > 0 ? `
+            <div class="search-result-tags">
+              ${tags.map(tag => `<span class="search-result-tag">${tag.trim()}</span>`).join('')}
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+
+    searchResults.innerHTML = resultsHtml;
+  }
+
+  function highlightQuery(text, query) {
+    if (!text || !query) return text;
+    
+    const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+  }
+
+  function escapeRegex(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function showStatus(message) {
+    searchStatus.textContent = message;
+    searchStatus.className = 'search-status';
+  }
+
+  function showError(message) {
+    searchStatus.textContent = message;
+    searchStatus.className = 'search-status search-status--error';
+  }
+
+  function showNoResults(query) {
+    searchStatus.textContent = `No results found for "${query}"`;
+    searchStatus.className = 'search-status search-status--no-results';
+    searchResults.innerHTML = `
+      <div class="search-no-results">
+        <p>Try adjusting your search terms or browse <a href="/blog/">all posts</a>.</p>
+      </div>
+    `;
+  }
+
+  function clearResults() {
+    searchResults.innerHTML = '';
+    searchStatus.textContent = '';
+    searchStatus.className = 'search-status';
+  }
+
+  function clearSearch() {
+    searchInput.value = '';
+    searchClear.hidden = true;
+    clearResults();
+    searchInput.focus();
+  }
+
+  // Initialize search when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeSearch);
+  } else {
+    initializeSearch();
+  }
+</script>

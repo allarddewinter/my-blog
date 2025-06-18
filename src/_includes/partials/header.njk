@@ -7,6 +7,10 @@
 
       <span class="font-display">{{ meta.siteName }}</span>
     </a>
-    {% include "partials/main-nav.njk" %}
+    
+    <div class="header-nav-container">
+      {% include "partials/main-nav.njk" %}
+      <custom-search></custom-search>
+    </div>
   </div>
 </header>

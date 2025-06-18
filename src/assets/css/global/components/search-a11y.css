@@ -1,0 +1,321 @@
+/* Search Accessibility Enhancements */
+
+/* Focus management and keyboard navigation */
+.search-input:focus-visible,
+.search-toggle:focus-visible,
+.search-clear:focus-visible,
+.search-modal-close:focus-visible,
+.search-result-link:focus-visible,
+.search-result-item:focus-visible {
+  outline: 2px solid var(--color-focus, #0066cc);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .search-input {
+    border-width: 3px;
+  }
+  
+  .search-input:focus {
+    border-width: 3px;
+    box-shadow: 0 0 0 2px var(--color-focus, #0066cc);
+  }
+  
+  .search-result {
+    border-width: 2px;
+  }
+  
+  .search-toggle {
+    border-width: 2px;
+  }
+  
+  mark {
+    background: var(--color-highlight-high-contrast, #ffff00);
+    color: var(--color-text-high-contrast, #000);
+    font-weight: bold;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .search-input,
+  .search-clear,
+  .search-toggle,
+  .search-modal-close,
+  .search-result,
+  .search-result-item {
+    transition: none;
+  }
+  
+  .search-modal-backdrop {
+    backdrop-filter: none;
+  }
+}
+
+/* Screen reader enhancements */
+.search-status[aria-live="polite"] {
+  /* Ensure status updates are announced */
+  position: relative;
+}
+
+/* Skip to search results */
+.skip-to-results {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-to-results:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: var(--space-xs) var(--space-s);
+  background: var(--color-bg, #fff);
+  color: var(--color-text, #333);
+  border: 2px solid var(--color-focus, #0066cc);
+  border-radius: var(--border-radius-base, 8px);
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+/* Keyboard navigation indicators */
+.search-result-item:focus-within,
+.search-result:focus-within {
+  border-color: var(--color-focus, #0066cc);
+  box-shadow: 0 0 0 2px var(--color-focus-alpha, rgba(0, 102, 204, 0.2));
+}
+
+/* Modal focus trap indicators */
+.search-modal[aria-modal="true"] {
+  /* Ensure modal is properly isolated */
+}
+
+.search-modal-content:focus-within {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 
+              0 0 0 2px var(--color-focus, #0066cc);
+}
+
+/* Search input states for screen readers */
+.search-input[aria-expanded="true"] + .search-clear {
+  /* Clear button is available when search is active */
+}
+
+.search-input:invalid {
+  /* Handle invalid search states if needed */
+}
+
+/* Loading and error states */
+.search-status--loading::before {
+  content: "⏳ ";
+  speak: never; /* Don't read the emoji */
+}
+
+.search-status--error::before {
+  content: "⚠️ ";
+  speak: never;
+}
+
+.search-status--no-results::before {
+  content: "ℹ️ ";
+  speak: never;
+}
+
+/* Keyboard shortcut indicators */
+.search-toggle::after {
+  content: "Ctrl+K";
+  font-size: var(--size-step--2);
+  color: var(--color-text-tertiary, #999);
+  margin-left: var(--space-2xs);
+  opacity: 0.7;
+}
+
+@media (max-width: 767px) {
+  .search-toggle::after {
+    display: none;
+  }
+}
+
+/* Mac users see Cmd+K */
+@supports (-webkit-appearance: none) {
+  .search-toggle::after {
+    content: "⌘K";
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  .search-toggle,
+  .search-clear,
+  .search-modal-close {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .search-input {
+    min-height: 44px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .search-result-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Voice control and speech recognition support */
+.search-input[aria-label] {
+  /* Ensure voice commands can target the search input */
+}
+
+/* Color blindness considerations */
+.search-status--error {
+  border-left: 3px solid var(--color-error, #dc3545);
+  padding-left: var(--space-s);
+}
+
+.search-status--no-results {
+  border-left: 3px solid var(--color-warning, #f59e0b);
+  padding-left: var(--space-s);
+}
+
+/* Search result highlighting for accessibility */
+.search-result-item[aria-current="true"] {
+  background-color: var(--color-bg-selected, #e3f2fd);
+  border: 2px solid var(--color-primary, #0066cc);
+}
+
+/* Ensure sufficient color contrast */
+@media (prefers-contrast: more) {
+  .search-result-excerpt {
+    color: var(--color-text, #333);
+  }
+  
+  .search-result-date {
+    color: var(--color-text-secondary-high-contrast, #555);
+  }
+  
+  .search-result-tag {
+    background: var(--color-bg-secondary-high-contrast, #e0e0e0);
+    color: var(--color-text, #333);
+    border: 1px solid var(--color-border, #ccc);
+  }
+}
+
+/* Focus management for modal */
+.search-modal[hidden] * {
+  /* Ensure hidden modal content is not focusable */
+  visibility: hidden;
+}
+
+.search-modal:not([hidden]) {
+  /* Restore visibility when modal is shown */
+}
+
+.search-modal:not([hidden]) * {
+  visibility: visible;
+}
+
+/* Announce search results count */
+.search-results[role="region"]::before {
+  content: attr(aria-label);
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Ensure proper heading hierarchy */
+.search-modal-title {
+  /* This should be the first heading in the modal */
+}
+
+.search-result-title {
+  /* These are subheadings under the modal title */
+}
+
+/* Loading spinner for screen readers */
+@keyframes search-loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.search-status--loading {
+  position: relative;
+}
+
+.search-status--loading::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border, #e1e5e9);
+  border-top: 2px solid var(--color-primary, #0066cc);
+  border-radius: 50%;
+  animation: search-loading 1s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-status--loading::after {
+    animation: none;
+    content: "...";
+    border: none;
+    width: auto;
+    height: auto;
+    position: static;
+    transform: none;
+  }
+}
+
+/* Ensure modal is announced properly */
+.search-modal[role="dialog"][aria-modal="true"] {
+  /* Screen readers will announce this as a modal dialog */
+}
+
+/* Search suggestions accessibility */
+.search-suggestions {
+  role: listbox;
+}
+
+.search-suggestion {
+  role: option;
+}
+
+.search-suggestion[aria-selected="true"] {
+  background-color: var(--color-bg-selected, #e3f2fd);
+  color: var(--color-text-selected, #0066cc);
+}
+
+/* Error recovery */
+.search-error-recovery {
+  margin-top: var(--space-s);
+  padding: var(--space-s);
+  background: var(--color-bg-info, #f0f9ff);
+  border: 1px solid var(--color-info, #0ea5e9);
+  border-radius: var(--border-radius-base, 8px);
+}
+
+.search-error-recovery h3 {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: var(--size-step-0);
+  color: var(--color-info-dark, #0c4a6e);
+}
+
+.search-error-recovery ul {
+  margin: 0;
+  padding-left: var(--space-m);
+}
+
+.search-error-recovery li {
+  margin-bottom: var(--space-2xs);
+}
