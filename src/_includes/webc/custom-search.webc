@@ -238,12 +238,13 @@
         const title = result.meta?.title || result.url;
         const excerpt = result.excerpt || '';
         
-        return `
-          <a href="${result.url}" class="search-result-item">
-            <div class="search-result-title">${this.highlightQuery(title, query)}</div>
-            ${excerpt ? `<div class="search-result-excerpt">${this.highlightQuery(excerpt, query)}</div>` : ''}
-          </a>
-        `;
+          return `
+            <a href="${result.url}" class="search-result-item">
+              <div class="search-result-title">${this.highlightQuery(title, query)}</div>
+              ${result.meta?.date ? `<div class="search-result-date">${new Date(result.meta.date).toLocaleDateString()}</div>` : ''}
+              ${excerpt ? `<div class="search-result-excerpt">${this.highlightQuery(excerpt, query)}</div>` : ''}
+            </a>
+          `;
       }).join('');
 
       const showingText = totalCount > 5 ? `Showing 5 of ${totalCount} results` : `${totalCount} result${totalCount === 1 ? '' : 's'}`;

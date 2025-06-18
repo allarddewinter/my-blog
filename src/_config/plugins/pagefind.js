@@ -17,7 +17,11 @@ export default function(eleventyConfig) {
     if (outputPath.includes('/admin/') || 
         outputPath.includes('/404.html') ||
         outputPath.includes('/robots.txt') ||
-        outputPath.includes('/sitemap.xml')) {
+        outputPath.includes('/sitemap.xml') ||
+        outputPath.includes('/tags/') ||      // Exclude tag pages
+        outputPath.includes('/search/') ||    // Exclude search page
+        outputPath.endsWith('/index.html') || // Exclude home page
+        outputPath.endsWith('/blog/index.html')) { // Exclude blog listing page
       return content;
     }
 
