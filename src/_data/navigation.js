@@ -1,13 +1,17 @@
 export default {
   top: [
     {
+      text: 'Search',
+      url: '/search/'
+    },
+    {
       text: 'About',
       url: '/about/'
     },
     {
       text: 'Posts',
       url: '/blog/'
-    }
+    },
   ],
   bottom: [
     {
