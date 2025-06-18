@@ -10,6 +10,7 @@
 
 @import-glob 'compositions/*.css' layer(compositions);
 @import-glob 'blocks/*.css' layer(blocks);
+@import-glob 'components/*.css' layer(components);
 @import-glob 'utilities/*.css' layer(utilities);
 
 /* debugging */
