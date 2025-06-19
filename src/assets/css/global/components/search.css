@@ -17,8 +17,7 @@
 }
 
 .search-header p {
-  color: var(--color-text-secondary, #666);
-  font-size: var(--size-step-0);
+  /* font-size: var(--size-step-0); */
 }
 
 /* Search Interface */
@@ -26,6 +25,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
+}
+
+/* Search Help */
+.search-help {
+  text-align: center;
 }
 
 /* Search Input Container */
@@ -72,13 +76,6 @@
 .search-clear:focus {
   color: var(--color-text, #333);
   background-color: var(--color-bg-secondary, #f5f5f5);
-}
-
-/* Search Help */
-.search-help {
-  font-size: var(--size-step--1);
-  color: var(--color-text-secondary, #666);
-  text-align: center;
 }
 
 /* Search Status */

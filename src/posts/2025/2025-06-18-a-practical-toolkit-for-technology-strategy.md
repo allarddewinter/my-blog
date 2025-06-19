@@ -1,7 +1,7 @@
 ---
 title: "A practical toolkit for technology strategy"
 description: "Moving from high-level maps to ground-level execution by combining Wardley Maps, Pace Layering, and structured strategy frameworks."
-date: 2026-06-18
+date: 2025-06-18
 tags: [strategy, tech-leadership, wardley-maps, pace-layering, systems engineering, systems-thinking]
 ---
 
