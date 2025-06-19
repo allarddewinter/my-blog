@@ -10,11 +10,11 @@ permalink: /to-do/index.html
 # 📝 My Website To-Do List
 
 - [x] Deploy 🚀
-- [ ] Logo design & favicon
+- [x] Logo design & favicon
 - [x] Update about page
 - [ ] Change og-images background
 - [ ] CSS: Update colors
 - [x] Make these checkboxes render as checkboxes
 - [x] Get email working
-- [ ] CSS: Update some css; text smaller, epecially quotes and have these checkboxes larger
+- [ ] CSS: Update; text smaller, epecially quotes and have these checkboxes larger
 - [ ] CSS: Make image only % width
