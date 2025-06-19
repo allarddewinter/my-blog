@@ -16,5 +16,5 @@ permalink: /to-do/index.html
 - [ ] CSS: Update colors
 - [x] Make these checkboxes render as checkboxes
 - [x] Get email working
-- [ ] CSS: Update; text smaller, epecially quotes and have these checkboxes larger
-- [ ] CSS: Make image only % width
+- [x] CSS: Update; text smaller, epecially quotes and have these checkboxes larger
+- [x] CSS: Make image only % width
