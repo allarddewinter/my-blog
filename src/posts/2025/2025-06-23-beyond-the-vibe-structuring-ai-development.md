@@ -28,6 +28,7 @@ Diwank's article outlines three distinct modes of working with an AI, each with 
 ### The constitution for your code
 
 {% image "/assets/images/posts/cursor-rules-options.png", "Screenshot of the Cursor editor's rules options; project rules, user rules, and memories.", "Cursor has the options for three kind of rules (or four?).", "lazy", null, "image-width-75" %}
+
 The concept of a "rulebook" is becoming a standard for professional AI-assisted development. [Claude](https://www.anthropic.com/engineering/claude-code-best-practices), [Cline](https://docs.cline.bot/features/cline-rules), and [Cursor](https://docs.cursor.com/context/rules) each offer a way to provide persistent context, but they differ in their approach. Claude's `CLAUDE.md` is the most straightforward, while Cline offers more organisation with its folder system. Cursor provides the most granular and controlling system, allowing developers to define precisely *how* and *when* a rule should apply.
 
 | Feature | Claude (`CLAUDE.md`) | Cline (`cline.rules`) | Cursor (`.cursor/rules`) |
