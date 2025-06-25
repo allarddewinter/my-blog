@@ -1,153 +1,135 @@
-# Eleventy Excellent
+# Allard de Winter's Personal Website & Linkblog
 
-Easy to use Eleventy starter, based on the workflow suggested by Andy Bell's [buildexcellentwebsit.es](https://buildexcellentwebsit.es/).
+> A thoughtful exploration of technology, strategic thinking, and positive mindset
 
-![GitHub Repo stars](https://img.shields.io/github/stars/madrilene/eleventy-excellent?style=flat-square&logo=github&logoColor=white&label=GitHub%20stars)
-[![Follow @lene@front-end.social](https://img.shields.io/mastodon/follow/109292536543732634?domain=https%3A%2F%2Ffront-end.social&style=flat-square&logo=Mastodon&logoColor=white&labelColor=%235B4BE1)](https://front-end.social/@lene)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57c89d85-535f-4fb8-b60e-3a2f26fe0498/deploy-status)](https://app.netlify.com/sites/allarddewinter/deploys)
+[![Built with Eleventy](https://img.shields.io/badge/built%20with-Eleventy-663399.svg?style=flat-square)](https://11ty.dev/)
+[![Lighthouse Performance](https://img.shields.io/badge/lighthouse-100%25-brightgreen.svg?style=flat-square)](https://pagespeed.web.dev/)
 
-If you end up using this starter, feel free to send me a link, I'd love to see it!
+**Live Site**: [allarddewinter.net](https://allarddewinter.net)
 
-- [Eleventy Excellent](#eleventy-excellent)
-	- [Preview](#preview)
-	- [Features](#features)
-	- [First steps](#first-steps)
-	- [Development](#development)
-		- [Install dependencies](#install-dependencies)
-		- [Working locally](#working-locally)
-		- [Creating a production build](#creating-a-production-build)
-	- [Built with Eleventy Excellent](#built-with-eleventy-excellent)
-	- [Credits and Thank yous](#credits-and-thank-yous)
+---
 
-## Preview
+## About This Site
 
-https://eleventy-excellent.netlify.app/
+This is my personal linkblog and digital garden where I explore the intersection of technology, strategic thinking, and cultivating a positive mindset. Drawing inspiration from:
 
-## Features
+- **Simon Willison's approach** to technology linkblogging and knowledge sharing
+- **Will Larsen's strategic perspectives** on systems thinking and engineering leadership  
+- **Michael Pilarczyk's philosophy** on mindset and positive business principles
 
-**This starter includes:**
+The site serves as both a knowledge repository and a space for processing insights from my work as a Technical Authority and Domain Architect in the European energy sector. It's my way of bookmarking ideas, reflecting on complex topics, and sharing discoveries that matter both professionally and personally.
 
-- **Cube Boilerplate**: Created by Andy Bell, available under the MIT License. [View Repository](https://github.com/Set-Creative-Studio/cube-boilerplate)
-- Accessible site navigation, editable in `src/_data/navigation.js`
-- Image optimization with Eleventy-img _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-an-image/))_
-- Youtube embed with lite-youtube _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-a-video/))_
-- Easy resource fetching with eleventy-fetch _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-fetched-content/))_
-- Syntax highlighting via eleventy-plugin-syntaxhighlight _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-some-code/))_
-- Advanced markdown handling _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-all-the-markdown/))_
-- 301 redirects for Netlify _([see blog post](https://eleventy-excellent.netlify.app/blog/post-with-301-redirects/))_
-- Automatically generated Open Graph images for blog posts _([see blog post](https://eleventy-excellent.netlify.app/blog/open-graph-images/))_
-- Tailwind CSS - but not how you might expect _([see blog post](https://eleventy-excellent.netlify.app/blog/what-is-tailwind-css-doing-here/))_
-- XML-sitemap
-- dayjs handling dates & times
-- Bundling via esbuild
-- RSS feed (now you can add more than one)
-- Links to platforms and social media profiles
-- Mastodon domain verification snippet
-- carbon.txt - to show that their digital infrastructure runs on green electricity
-- Accessible dark and light mode based on user preference and custom toggle
-- Tags in blog posts
-- Accessible blog pagination
-- A styleguide™
+## Technical Foundation
 
-## First steps
+Built on the exceptional [Eleventy Excellent](https://eleventy-excellent.netlify.app/) starter template created by [Lene Saile](https://github.com/madrilene). This foundation provides a robust, performant, and accessible base that I've customised for my specific content needs.
 
-[Read the Get started docs!](https://eleventy-excellent.netlify.app/get-started/)
+### Key Features
+
+- **Static Site Generation**: Powered by [Eleventy](https://11ty.dev) v3.0
+- **Advanced Search**: Full-text search powered by [Pagefind](https://pagefind.app/) with WebAssembly optimisation
+- **CSS Architecture**: CUBE CSS methodology with intelligent Tailwind integration
+- **Component System**: WebC custom elements for enhanced functionality
+- **Performance First**: Optimised images, lazy loading, minimal JavaScript footprint
+- **Accessibility**: WCAG compliant with semantic HTML and proper ARIA implementation
+- **SEO Optimised**: Auto-generated Open Graph images, structured data, XML sitemaps
+- **Modern Security**: Content Security Policy, XSS protection, and secure headers
+- **Deployment**: Seamlessly hosted on Netlify with optimised build pipeline
+
+### Search Implementation
+
+The site features a sophisticated search system using Pagefind:
+
+- **Full-text indexing** of all content with intelligent ranking
+- **WebAssembly optimisation** for lightning-fast client-side search
+- **Progressive enhancement** - works without JavaScript
+- **Smart caching** with immutable headers for optimal performance
+- **Accessible interface** with keyboard navigation support
+
+## Content Philosophy
+
+This linkblog operates on the principle that sharing knowledge and insights creates value for both the author and readers. Each post aims to:
+
+- **Explore complex topics** with clarity and practical application
+- **Bridge technical and strategic thinking** through real-world examples
+- **Maintain a positive, constructive tone** while addressing genuine challenges
+- **Provide context and reflection** rather than just raw links or information
+
+The content spans technology trends, strategic decision-making, leadership insights, and the mindset approaches that underpin effective work and life.
 
 ## Development
 
-### Install dependencies
+### Prerequisites
 
-```
+- Node.js 20.x or higher
+- npm or yarn package manager
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/allarddewinter/my-blog.git
+cd my-blog
+
+# Install dependencies
 npm install
-```
 
-### Working locally
-
-Starts watch tasks to compile when changes detected
-
-```
+# Start development server
 npm start
 ```
 
-### Creating a production build
+The site will be available at `http://localhost:8080` with hot reload enabled.
 
-Minify JS, CSS and HTML.
+### Building for Production
 
-```
+```bash
+# Create optimised production build
 npm run build
+
+# The built site will be in the /dist directory
 ```
 
-## Built with Eleventy Excellent
+### Deployment
 
-[Sites that are based on / built with Eleventy Excellent. ](https://eleventy-excellent.netlify.app/built-with/)
-Add your site by submitting a pull request! :)
+The site automatically deploys to Netlify on pushes to the main branch. The build process includes:
 
-## Credits and Thank yous
+- Static site generation with Eleventy
+- Search index generation with Pagefind
+- Asset optimisation and minification
+- Security header configuration
 
-**Andy Bell**
+## Credits and Acknowledgements
 
-> Be the browser's mentor, not its micromanager. Give the browser some solid rules and hints, then let it make the right decisions for the people that visit it, based on their device, connection quality and capabilities.
+This site stands on the shoulders of giants. Huge thanks to:
 
-- https://buildexcellentwebsit.es/
-- https://cube.fyi/
-- https://learneleventyfromscratch.com/
+### Primary Foundation
 
-**Heydon Pickering**
+**[Lene Saile](https://github.com/madrilene)** - Creator of Eleventy Excellent  
+The stellar foundation that makes this site possible. Lene's attention to performance, accessibility, and developer experience is exceptional.
 
-Heydon creates some invaluable resources.
+**[Andy Bell](https://buildexcellentwebsit.es/)** - CUBE CSS and Build Excellent Websites  
+The methodology and principles that guide the CSS architecture and overall approach.
 
-- https://every-layout.dev/
-- https://inclusive-components.design/
+### Core Contributors
 
-**Zach Leatherman**
+**[Zach Leatherman](https://www.zachleat.com/)** - Creator of Eleventy  
+For building and continuously improving the static site generator that powers this site.
 
-Zach is developing Eleventy and is constantly making it even better!
+**[CloudCannon Team](https://cloudcannon.com/)** - Pagefind creators  
+For the brilliant client-side search solution that makes content discovery seamless.
 
-- https://www.11ty.dev/
-- https://www.zachleat.com/
+### Inspiration and Methodology
 
-**Stephanie Eckles**
+**[Heydon Pickering](https://inclusive-components.design/)** - Inclusive design principles  
+**[Stephanie Eckles](https://moderncss.dev/)** - Modern CSS approaches  
+**[Sara Soueidan](https://www.sarasoueidan.com/)** - Accessibility expertise  
 
-Stephanie provides a lot of resources for Eleventy and modern CSS.
+### Content Influences
 
-- https://smolcss.dev/
-- https://moderncss.dev/
+**[Simon Willison](https://simonwillison.net/)** - Linkblogging mastery and technical insight sharing  
+**[Will Larsen](https://lethain.com/)** - Strategic thinking and engineering leadership  
+**[Michael Pilarczyk](https://michaelpilarczyk.com/)** - Positive business philosophy and mindset approaches  
 
-**Ryan Mulligan**
+---
 
-I'm using Ryan's example of a breakout wrapper on this site.
-
-Also have a look at those codepens!
-
-- https://ryanmulligan.dev/
-- https://codepen.io/hexagoncircle/
-
-**Sara Soueidan**
-
-I took a close look at Sara's recommendations for accessible theme switch and pagination in the Practical Accessibility course
-
-- https://practical-accessibility.today/
-- https://www.sarasoueidan.com/
-
-**Steven Woodson**
-
-The style guide was inspired by a [great talk on the Eleventy Meetup](https://www.youtube.com/watch?v=3mhA2bH6q8s). Steven also wrote a [blog post](https://stevenwoodson.com/blog/eleventy-style-guide-generator-step-by-step-guide-adding-to-an-existing-site/) about that.
-
-**Aleksandr Hovhannisyan**
-
-Aleksandr seems to value a well-structured project just as much as I do. It was the repo from aleksandrhovhannisyan.com that inspired me to write the article [Organizing the Eleventy config file](https://www.lenesaile.com/en/blog/organizing-the-eleventy-config-file/). The 301 redirect solution I'm using is from Aleksandr's article.
-
-- https://github.com/AleksandrHovhannisyan
-- https://www.aleksandrhovhannisyan.com/blog/eleventy-netlify-redirects/
-
-**Manuel Matuzović**
-
-Manuel is an accessibility expert. The menu I was using as default up to v2, is very much inspired by an article Manuel wrote on web.dev.
-
-- https://web.dev/website-navigation/
-- https://www.matuzo.at/
-
-**Bernard Nijenhuis**
-
-Bernard wrote the article on which the Open Graph Images implementation is based.
-
-- https://bnijenhuis.nl/notes/automatically-generate-open-graph-images-in-eleventy/
+**Personal Site** - Built with care by [Allard de Winter](https://allarddewinter.net/about/) | **Not accepting contributions** - This is a personal learning and sharing space
