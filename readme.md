@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/57c89d85-535f-4fb8-b60e-3a2f26fe0498/deploy-status)](https://app.netlify.com/sites/allarddewinter/deploys)
 [![Built with Eleventy](https://img.shields.io/badge/built%20with-Eleventy-663399.svg?style=flat-square)](https://11ty.dev/)
-[![Lighthouse Performance](https://img.shields.io/badge/lighthouse-100%25-brightgreen.svg?style=flat-square)](https://pagespeed.web.dev/)
+[![Lighthouse Performance](https://img.shields.io/badge/Lighthouse-95%2B-brightgreen.svg?style=flat-square)](https://pagespeed.web.dev/analysis/https-allarddewinter-net/pz1920iyle?form_factor=desktop)
 
 **Live Site**: [allarddewinter.net](https://allarddewinter.net)
 
