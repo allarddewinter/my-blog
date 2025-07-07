@@ -59,7 +59,7 @@ With the foundations in place, the course defines what systems engineering actua
 
 Without this discipline, it is easy to create systems that are functional but unnecessarily complex, like the famous Rube Goldberg machines.
 
-{% image "/assets/images/posts/rube-goldberg-self-operating-napkin.gif", "A Rube Goldberg cartoon depicting a complex, convoluted machine designed simply to wipe a person's mouth with a napkin.", "The 'Self-Operating Napkin'. [Rube Goldberg, Public domain, via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif)", "lazy", null, "image-width-50" %}
+{% image "/assets/images/posts/rube-goldberg-self-operating-napkin.gif", "A Rube Goldberg cartoon depicting a complex, convoluted machine designed simply to wipe a person's mouth with a napkin.", "The 'Self-Operating Napkin'. <a title=\"Rube Goldberg, Public domain, via Wikimedia Commons\" href=\"https://commons.wikimedia.org/wiki/File:Rube_Goldberg%27s_%22Self-Operating_Napkin%22_%28cropped%29.gif\">Rube Goldberg, Public domain, via Wikimedia Commons</a>", "lazy", null, "image-width-50" %}
 
 The fundamental process used throughout is **Analysis-Synthesis-Evaluation (A-S-E)**. It is an iterative loop: we analyse the problem, synthesise potential solutions, and evaluate them against the requirements. This loop is repeated at every level of design, from the overall system down to the smallest component.
 
