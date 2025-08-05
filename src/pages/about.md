@@ -31,13 +31,17 @@ As a Technical Authority and Domain Architect, I see my role as bridging the gap
 
 I like breaking down complex problems, looking beyond existing boundaries, and providing clear insights. These insights always come from understanding not just the technical possibilities, but also the true business needs and value. 
 
-## Why I Build This Website
+## Why this site exists
 
-This website functions as my personal 'linkblog'; a space for exploring ideas at the intersection of technology, strategic thinking, and a positive mindset.
+For years, I have been collecting interesting links from colleagues, newsletters, podcasts, and general browsing. My system was simple: save them in my browser's bookmarks or a OneNote file with a brief note. While functional, this approach felt incomplete. The context was often lost, and the knowledge remained siloed and private.
 
-Inspired by approaches like Simon Willison's linkblogging for technology insights, Will Larsen's focus on strategic perspectives, and Michael Pilarczyk's philosophy on mindset, I use this platform to share insights, bookmarks, and reflections. My aim is to explore the principles behind building robust systems (in both organisations and technology), making effective decisions, and cultivating a resilient, optimistic outlook.
+This website is my solution. It serves as a personal knowledge blog or, more accurately, an **elaborate public bookmarking tool**. I wanted to create a space not just to save a link, but to document *why* it captured my attention. Here, I add summaries, pull out key ideas, and share my own perspective on the topic. It is a place for me to process my thoughts, document my learnings, and explore subjects more deeply.
 
-It's a bookmarking tool and also a place to process and share thoughts on topics that matter to me professionally and personally, contributing to a clearer understanding of complex areas.
+My primary audience is my future self. This site is part of my digital garden, a knowledge base I can return to and build upon over time. However, by making it public, I hope it also proves useful to others who stumble upon it.
+
+The content is shaped by a few key inspirations: the linkblogging style of **Simon Willison** for technology, the strategic thinking of **Will Larsen**, and the positive mindset philosophy of **Michael Pilarczyk**. Following their lead, I focus on the intersection of technology, strategy, and mindset. My goal is to explore the principles behind building robust systems (in both organisations and technology), making effective decisions, and cultivating a resilient, optimistic outlook.
+
+This is a space to bring clarity to complex areas and share the resources and ideas that I find valuable.
 
 ## Connect
 
