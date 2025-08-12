@@ -81,7 +81,7 @@ export default function(eleventyConfig) {
       }
     }
 
-    // Add higher weight to headings (Pagefind 1.0 does this automatically, but we can enhance it)
+    // Add higher weight to headings
     content = content.replace(
       /<(h[1-6])([^>]*)>/gi,
       '<$1$2 data-pagefind-weight="2.0">'
@@ -95,28 +95,6 @@ export default function(eleventyConfig) {
 
     return content;
   });
-
-  // Run Pagefind indexing after build (in production only)
-  if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.on('eleventy.after', async () => {
-      console.log('🔍 Running Pagefind indexing...');
-      
-      try {
-        const outputDir = eleventyConfig.dir?.output || 'dist';
-        
-        // Run Pagefind with enhanced exclusion options
-        execSync(`npx pagefind --site ${outputDir} --output-subdir pagefind --exclude-selectors "[data-pagefind-ignore],.tag-list,nav,.search-*"`, {
-          stdio: 'inherit',
-          cwd: process.cwd()
-        });
-        
-        console.log('✅ Pagefind indexing completed successfully');
-      } catch (error) {
-        console.error('❌ Pagefind indexing failed:', error.message);
-        throw error;
-      }
-    });
-  }
 
   return {
     name: 'pagefind-plugin'
