@@ -9,10 +9,11 @@ Moving data science projects from a local laptop to a scalable production enviro
 
 The Talk Python podcast recently featured Matthew Rocklin and Nat Tabris from [Coiled](https://coiled.io) to discuss this problem. They share lessons learned from building their platform, which is designed to help Python data scientists scale their work in the cloud with minimal DevOps overhead.
 
-<custom-youtube  
-  @slug="omBibVGLzyo"  
-  @label="Talk Python: Data Science Cloud Lessons at Scale">  
-</custom-youtube>
+<lite-youtube videoid="omBibVGLzyo" style="background-image: url('https://i.ytimg.com/vi/omBibVGLzyo/hqdefault.jpg');">
+  <a href="https://youtube.com/watch?v=omBibVGLzyo" class="lyt-playbtn" title="Play Video">
+    <span class="lyt-visually-hidden">Play Video: Talk Python: Data Science Cloud Lessons at Scale</span>
+  </a>
+</lite-youtube>
 
 ### The Core Philosophy: Making Cloud Scale Feel Like Play
 
@@ -42,7 +43,7 @@ Ultimately, it is a trade-off. The Coiled approach optimises for the speed of in
 
 ### Key Takeaways
 
-*   **Optimise for Your Workflow:** The tension between rapid iteration and production stability is central to MLOps. Tools like Coiled are optimised for the former, making them suitable for exploratory, bursty workloads.
+*   **Optimise for Your Workflow:** The tension between rapid iteration and stability in production is central to MLOps. Tools like Coiled are optimised for the former, making them suitable for exploratory, bursty workloads.
 *   **The Cost of Iteration:** The overhead of your development cycle matters. For frequent, small changes, a 5-10 minute Docker build can be a significant drag on productivity.
 *   **Standardisation Has Value:** For teams with a more structured and less frequent release cadence, the consistency and reproducibility of a Docker-based workflow can provide more long-term value than pure speed of iteration.
 *   **Context is King:** The right tool depends entirely on your team's specific needs, deployment frequency, and tolerance for process overhead.
