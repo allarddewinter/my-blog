@@ -1,7 +1,7 @@
 ---
 title: "Avoiding Negativity Echo Chambers in Your Career"
 description: "Marc Brooker advocates for steering clear of cynical communities to foster career growth and personal well-being."
-date: 2025-06-20
+date: 2025-10-13
 tags: [mindset, career, productivity, leadership]
 ---
 
