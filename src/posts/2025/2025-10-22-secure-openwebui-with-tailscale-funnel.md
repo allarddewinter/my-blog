@@ -62,8 +62,6 @@ lxc.mount.auto: cgroup:rw
 
 Docker is required to run OpenWebUI. Follow the official installation guide for Debian: [Docker Installation for Debian](https://docs.docker.com/desktop/setup/install/linux/debian/).
 
-> **Note:** The `curl` and `git` packages are not strictly required for this specific setup but are commonly used in container environments. If you need them, install with `apt install -y curl git`.
-
 ### 4.2 Create OpenWebUI Directory Structure
 
 ```bash
@@ -191,6 +189,7 @@ nginx -t && systemctl restart nginx
 
 ### 6.1 Install Tailscale
 
+On the Proxmox host:
 ```bash
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
