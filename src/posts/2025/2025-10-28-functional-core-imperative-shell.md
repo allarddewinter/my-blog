@@ -133,6 +133,8 @@ This refactoring makes the core logic (`get_expired_users`, `generate_expiry_ema
 
 ### Reflections and Nuances
 
+From: https://news.ycombinator.com/item?id=45701901
+
 The FCIS pattern, while powerful, invites discussion on its practical application and relationship with other architectural principles.
 
 #### FCIS vs. "Generic Core, Specific Shell" (GCSS)
