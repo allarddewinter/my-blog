@@ -1,5 +1,5 @@
 ---
-title: "Good Engineering Management" Is a Fad
+title: Good Engineering Management - Is a Fad
 description: Will Larson argues that engineering management styles are not moral imperatives but responses to shifting business conditions, while identifying enduring foundational skills.
 date: 2025-11-24
 tags: [leadership, engineering-management, strategy, career-development]
