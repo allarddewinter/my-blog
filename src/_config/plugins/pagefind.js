@@ -13,19 +13,37 @@ export default function(eleventyConfig) {
       return content;
     }
 
-    // Skip admin pages and other non-content pages
-    if (outputPath.includes('/admin/') || 
-        outputPath.includes('/404.html') ||
-        outputPath.includes('/robots.txt') ||
-        outputPath.includes('/sitemap.xml') ||
-        outputPath.includes('/tags/') ||      // Exclude tag pages
-        outputPath.includes('/search/') ||    // Exclude search page
-        outputPath.endsWith('/index.html') || // Exclude home page
-        outputPath.endsWith('/blog/index.html')) { // Exclude blog listing page
+    // Enhanced exclusion patterns
+    const excludePatterns = [
+      '/admin/',
+      '/404.html',
+      '/robots.txt',
+      '/sitemap.xml',
+      '/tags/',           // All tag pages
+      '/tag/',            // Alternative tag structure
+      '/search/',         // Search page
+      '/feed.',           // Feed files
+      '/categories/',     // Category pages if you have them
+    ];
+
+    // Check if page should be excluded
+    const shouldExclude = excludePatterns.some(pattern => 
+      outputPath.includes(pattern)
+    ) || 
+    outputPath.endsWith('/index.html') ||         // Home page
+    outputPath.endsWith('/blog/index.html') ||    // Blog listing
+    outputPath.match(/\/tags\/[^\/]+\/index\.html$/); // Individual tag pages
+
+    if (shouldExclude) {
+      // Add data-pagefind-ignore to exclude from indexing
+      content = content.replace(
+        /<html([^>]*)>/gi,
+        '<html$1 data-pagefind-ignore>'
+      );
       return content;
     }
 
-    // Add data-pagefind-body to main content areas
+    // Add data-pagefind-body to main content areas for included pages
     content = content.replace(
       /<main([^>]*)>/gi,
       '<main$1 data-pagefind-body>'
@@ -58,12 +76,12 @@ export default function(eleventyConfig) {
       if (metaTags.length > 0) {
         content = content.replace(
           /<\/head>/i,
-          `  ${metaTags.join('\n  ')}\n</head>`
+          `  ${metaTags.join('\n  ')}\n  </head>`
         );
       }
     }
 
-    // Add higher weight to headings (Pagefind 1.0 does this automatically, but we can enhance it)
+    // Add higher weight to headings
     content = content.replace(
       /<(h[1-6])([^>]*)>/gi,
       '<$1$2 data-pagefind-weight="2.0">'
@@ -77,28 +95,6 @@ export default function(eleventyConfig) {
 
     return content;
   });
-
-  // Run Pagefind indexing after build (in production only)
-  if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.on('eleventy.after', async () => {
-      console.log('🔍 Running Pagefind indexing...');
-      
-      try {
-        const outputDir = eleventyConfig.dir?.output || 'dist';
-        
-        // Run Pagefind with modern v1.0+ options
-        execSync(`npx pagefind --site ${outputDir} --output-subdir pagefind`, {
-          stdio: 'inherit',
-          cwd: process.cwd()
-        });
-        
-        console.log('✅ Pagefind indexing completed successfully');
-      } catch (error) {
-        console.error('❌ Pagefind indexing failed:', error.message);
-        throw error;
-      }
-    });
-  }
 
   return {
     name: 'pagefind-plugin'
