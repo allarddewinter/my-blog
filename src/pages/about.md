@@ -48,4 +48,4 @@ This is a space to bring clarity to complex areas and share the resources and id
 Feel free to connect with me:
 
 *   [LinkedIn](https://www.linkedin.com/in/allarddewinter/)
-*   Email: [allard@allarddewinter.net](mailto:allard@allarddewinter.net)
+*   Email: [contact@allarddewinter.net](mailto:contact@allarddewinter.net)
