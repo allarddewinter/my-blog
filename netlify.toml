@@ -3,6 +3,12 @@ package = "netlify-plugin-cache"
   [plugins.inputs]
   paths = [ ".cache" ]
 
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  ELEVENTY_ENV = "production"
 
 [[headers]]
     for = "/*"
@@ -13,11 +19,6 @@ package = "netlify-plugin-cache"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "autoplay=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), publickey-credentials-get=()"
-
-
-[build]
-  command = "npm run build"
-  publish = "dist"
 
 # Pagefind search optimization
 [[headers]]
